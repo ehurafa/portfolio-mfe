@@ -1,0 +1,57 @@
+.certificates .wrapper {
+    justify-content: start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.certificates .card {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.certificates .icon  {
+    display: inline-block;
+    background: #eee;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    color: #555;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.certificates i {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+
+.certificates h3 {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: normal;
+    min-height: 3.7em;
+    display: inline-block;
+}
+
+.certificates .about {
+    text-align: left;
+    border-top: 1px solid #dedede;
+    padding-top: 10px;
+    margin-top: 8px;
+}
+
+.certificates  .about p {
+    font-size: 0.7rem;
+}
+
+.certificates .card:hover a {
+    color: #282828;
+    background: #fff;
+    border-color: #eee;
+}

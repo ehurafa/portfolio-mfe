@@ -3,8 +3,6 @@ import App from "./App";
 
 export default function Root(props) {
   return (
-    <section style={{ marginTop: 100 }}>
-      <App name="ReactCertificates" />
-    </section>
+    <App name="ReactCertificates" />
   );
 }

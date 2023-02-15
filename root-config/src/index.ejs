@@ -88,75 +88,27 @@
 
 <body>
   <style>
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #111D4A;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      width: 100%;
-      height: 75px;
-      display: flex;
-      align-items: center;
-      display: none;
-    }
+      html, body {
+        font-size: 16px;
+      }
+      .main-sidebar {
+        height: 100vh;
+        width: 100%;
+        max-width: 280px;
+        float: left;
+      }
+      .main-content {
+        float: left;
+        width: calc(100% - 280px);
+        padding: 40px 20px 20px 20px;
+      }
 
-    .navbar ul {
-      display: flex;
-      align-items: center;
-      list-style-type: none;
-      height: 100%;
-    }
-
-    .navbar li {
-      padding-right: 24px;
-      height: 100%;
-    }
-
-    .navbar li:hover {
-      opacity: 0.8;
-    }
-
-    .navbar a {
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-    }
+      .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
   </style>
-  <div class="navbar">
-    <aside>
 
-      <div class="inner" >
-          <div class="logo">
-              <figure> 
-                  <img src="assets/img/profile.jpg" alt="Foto de Perfil" />
-              </figure>
-          </div>
-
-          <div class="brand">
-              <figure> 
-                  <img src="./assets/img/logo.png" alt="Logotipo - Rafael Gomes" />
-              </figure>
-              <p>Front-end Developer</p>
-          </div>
-          <nav>
-            <li>
-              <a onclick="singleSpaNavigate('/portfolio/contact')">
-                <li>
-                 Contato
-                </li>
-              </a>
-            </li>
-  
-        </nav>
-      </div>  
-
-
-
-  </aside>
-  </div>
   <script>
     System.import('@rg/root-config');
   </script>

@@ -25,17 +25,17 @@ const ReactSidebar = () => {
                     <div className="social">
                         <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
                             <span class="hi-icon">
-                                <i className="fa fa-linkedin-in"></i>
+                                <i className="fab fa-linkedin-in"></i>
                             </span>
                         </a>
-                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                        <a href="https://br.pinterest.com/ehurafa/jobs/" className="transition hi-icon-effect-3 hi-icon-effect-3b pinterest" target="_blank">
                             <span class="hi-icon">
-                                <i className="fa fa-linkedin-in"></i>
+                                <i className="fab fa-pinterest-p"></i>
                             </span>
                         </a>
-                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b github" target="_blank">
                             <span class="hi-icon">
-                                <i className="fa fa-linkedin-in"></i>
+                                <i className="fab fa-github-alt"></i>
                             </span>
                         </a>
                     </div>
@@ -45,10 +45,10 @@ const ReactSidebar = () => {
                         </nav>
 
                         <nav>
-                            <Link to="/certificates">Certificados</Link>
+                            <Link to="/certificados">Certificados</Link>
                         </nav>
                         <nav>
-                            <Link to="/angular/contact">Contato</Link>
+                            <Link to="/portfolio/contato">Contato</Link>
                         </nav>
                     </div>
                 </div>
