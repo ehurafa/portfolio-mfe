@@ -8,7 +8,7 @@ const ReactSidebar = () => {
 
     return (
         <BrowserRouter>
-            <aside className="sidebar">
+            <div className="sidebar">
                 <div className="inner" >
                     <div className="logo">
                         <figure> 
@@ -41,11 +41,18 @@ const ReactSidebar = () => {
                     </div>
                     <div className="navigation">
                         <nav>
+                            <Link to="/portfolio">Inicial</Link>
+                        </nav>
+
+                        <nav>
+                            <Link to="/certificates">Certificados</Link>
+                        </nav>
+                        <nav>
                             <Link to="/angular/contact">Contato</Link>
                         </nav>
                     </div>
                 </div>
-            </aside>
+            </div>
         </BrowserRouter>
     )
 }

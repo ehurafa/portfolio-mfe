@@ -1,15 +1,17 @@
 
-      <single-spa-router>
-
-        <div class="main-content">
-          <route path="react-header">
-            <application name="@rg/react-header"></application>
-          </route>
+    <single-spa-router>
+      <aside>
+        <route path="/">
+          <application name="@rg/react-sidebar"></application>
+        </route>
+      </aside>
+      <main class="main-content">
           <route path="react-single">
             <application name="@rg/react-single"></application>
           </route>
-        </div>
-        <footer>
-          <application name="@organization/footer"></application>
-        </footer>
-      </single-spa-router>
+          <route path="certificates">
+            <application name="@rg/react-certificates"></application>
+          </route>
+      </main>
+      
+  </single-spa-router>
