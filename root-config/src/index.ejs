@@ -5,7 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Single SPA React Angular</title>
+  <title>Portfólio Microfrontend</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -74,6 +81,8 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
+
+
 </head>
 
 <body>
@@ -114,20 +123,38 @@
       cursor: pointer;
     }
   </style>
-  <!-- <div class="navbar">
-    <ul>
-      <a onclick="singleSpaNavigate('/react')">
-        <li>
-          React
-        </li>
-      </a>
-      <a onclick="singleSpaNavigate('/angular')">
-        <li>
-          Angular
-        </li>
-      </a>
-    </ul>
-  </div> -->
+  <div class="navbar">
+    <aside>
+
+      <div class="inner" >
+          <div class="logo">
+              <figure> 
+                  <img src="assets/img/profile.jpg" alt="Foto de Perfil" />
+              </figure>
+          </div>
+
+          <div class="brand">
+              <figure> 
+                  <img src="./assets/img/logo.png" alt="Logotipo - Rafael Gomes" />
+              </figure>
+              <p>Front-end Developer</p>
+          </div>
+          <nav>
+            <li>
+              <a onclick="singleSpaNavigate('/portfolio/contact')">
+                <li>
+                 Contato
+                </li>
+              </a>
+            </li>
+  
+        </nav>
+      </div>  
+
+
+
+  </aside>
+  </div>
   <script>
     System.import('@rg/root-config');
   </script>

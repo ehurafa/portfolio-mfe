@@ -1,60 +1,53 @@
 import React from 'react'
 import { Link, BrowserRouter } from 'react-router-dom'
+import './App.css';
+import profile from './img/profile.jpg'
+import brand from './img/brand.png'
 
-const App = () => {
+const ReactSidebar = () => {
 
     return (
         <BrowserRouter>
-            <aside>
-                <nav>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/react-single">Single</Link>
-                    </li>
-                    <li>
-                        <Link to="/react-lazy">Lazy</Link>
-                    </li>
-                    <li>
-                        <Link to="/react-multiples">Multiples</Link>
-                    </li>
-                    <li>
-                        <Link to="/react-router">Routes</Link>
-                    </li>
-                    <li>
-                        <Link to="/test-angular">Angular</Link>
-                    </li>
-
-                </nav>
-                <div class="inner" >
-                    <div class="logo">
+            <aside className="sidebar">
+                <div className="inner" >
+                    <div className="logo">
                         <figure> 
-                            <img src="assets/img/profile.jpg" alt="Foto de Perfil" />
+                            <img src={ profile }  alt="Foto de Perfil" />
                         </figure>
                     </div>
-
-                    <div class="brand">
+                    <div className="brand">
                         <figure> 
-                            <img src="./assets/img/logo.png" alt="Logotipo - Rafael Gomes" />
+                            <img src={ brand } alt="Logotipo - Rafael Gomes" />
                         </figure>
                         <p>Front-end Developer</p>
                     </div>
 
-
-
-                    <div class="navigation">
+                    <div className="social">
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                            <span class="hi-icon">
+                                <i className="fa fa-linkedin-in"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                            <span class="hi-icon">
+                                <i className="fa fa-linkedin-in"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                            <span class="hi-icon">
+                                <i className="fa fa-linkedin-in"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div className="navigation">
                         <nav>
                             <Link to="/angular/contact">Contato</Link>
                         </nav>
                     </div>
-                </div>  
-
-
-
+                </div>
             </aside>
         </BrowserRouter>
     )
 }
 
-export default App
+export default ReactSidebar

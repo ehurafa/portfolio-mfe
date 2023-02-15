@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato,sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+}
+
+.sidebar .inner {
+    position: fixed;
+    padding: 0 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 280px;
+    height: 100vh;
+    background: #282828;
+    z-index: 2;
+}
+
+.logo {
+    margin: 2.5rem 0;
+}
+figure {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+img {
+    max-width: 100%;
+}
+
+.logo figure img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.brand p {
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.hi-icon {
+    display: inline-block;
+	cursor: pointer;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+    color: #fff;
+
+    transition: color 0.3s;
+    box-shadow: 0 0 0 1px #fff;
+}
+.hi-icon:hover .fa-linkedin-in {
+    color: #0077b7;
+}
+.hi-icon:hover  .fa-pinterest-p {
+    color: #cd0000;
+}
+.hi-icon:hover .fa-github-alt {
+    color:  #800080;
+}
+
+.hi-icon:after {
+    border-radius: 50%;    
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+
+    transition: 0.2s, opacity 0.3s;
+
+    top: -2px;
+    left: -2px;
+    padding: 2px;
+    z-index: -1;
+    background: #fff;
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+.hi-icon:hover:after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.hi-icon:before {
+    speak: none;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hi-icon  i {
+    margin-top: 10px;
+}
+
+.social {
+    margin-bottom: 2rem;
+}
+
+.social a {
+    margin-right: 15px;
+}
+
+.navigation nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.navigation nav a {
+    text-decoration: none;
+    transition: all .3s ease;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}

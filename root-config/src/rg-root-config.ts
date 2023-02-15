@@ -18,10 +18,10 @@ registerApplication({
 });
 
 registerApplication({
-  name: "portfolio-angular",
-  app: () => System.import("portfolio-angular"),
-  activeWhen: ["/angular"],
-});
+   name: "portfolio-angular",
+   app: () => System.import("portfolio-angular"),
+   activeWhen: ["/portfolio"],
+ });
 
 start({
   urlRerouteOnly: true,
