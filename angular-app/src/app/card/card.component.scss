@@ -1,0 +1,62 @@
+@import '../../helpers/mixins';
+
+.card {
+    @include box-shadow(1px,1px,2px, rgba(157,157,157,0.2));
+
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 2rem;
+
+    &.elevation {
+       
+    }
+
+    figure {  
+        width: 100%;
+       // height: 300px;
+        overflow: hidden;
+
+        img {
+            @include transition(all 1s ease);
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    article {
+        width: 100%;
+        text-align: center;
+        h2 {
+            font-size: 1.25rem;
+            margin: 1.875rem 0;
+            padding: 0 1rem;
+            a {
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        .tags {
+            margin-bottom: 1.0625rem;
+            span {
+                margin: 0 5px;
+            }
+        }
+    }
+}
+@for $i from 1 through 25 {
+    .box-#{$i} .content {
+  
+      // Debugging styles
+      $size: random(10);
+      padding-bottom: 1.5em * $size;
+    }
+  }
+.masonry-item { width: 200px; }

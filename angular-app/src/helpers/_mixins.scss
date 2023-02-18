@@ -1,0 +1,202 @@
+@import './colors';
+@import './responsive';
+
+@mixin primary_link() {
+    color: #fff;
+    &:hover {
+        color: $color_blue;
+    }
+}
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+	-moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+	transform: $args;
+}
+
+@mixin box-shadow($top:0px, $left:0px, $blur: 5px, $color: #000, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+ }
+ 
+ @mixin border-radius($radius: 5px){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+ }
+ @mixin box-sizing( $type: border-box ) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    -o-box-sizing: $type;
+    -ms-box-sizing: $type;
+    box-sizing: $type;
+ }
+
+ @mixin line-height($height) {
+  height: $height;
+  line-height: $height;
+}
+@mixin innerColor( $color: #0db6e0 ) {
+  
+  background-color: transparentize( $color , 0.05 );
+  background-image:
+    linear-gradient(
+      90deg, 
+      transparentize( lighten( $color, 5% ), 1 ) 10%,
+      transparentize( lighten( $color, 10% ), 0.2 ) 30%,
+      transparentize( lighten( $color, 15% ), 0 ) 70%,
+      transparentize( lighten( $color, 10% ), 0.2 ) 80%,
+      transparentize( lighten( $color, 5% ), 1 ) 90%
+    ),
+    linear-gradient( 
+      to right,
+      transparentize( lighten( $color, 15% ), 1 ) 0%,
+      transparentize( lighten( $color, 15% ), 0 ) 100%
+    ),
+    linear-gradient( 
+      to left,
+      transparentize( lighten( $color, 15% ), 1 ) 0%,
+      transparentize( lighten( $color, 15% ), 0 ) 100%
+    );
+  
+  border-color: lighten( $color, 20% );
+  
+  box-shadow: 
+    0 0 0.6em lighten( $color, 10% ) inset,
+    0 0 0.4em lighten( $color, 5% ) inset,
+    0 0 0.5em transparentize( $color, 0.5),
+    0 0 0.1em transparentize( lighten( $color, 50% ), 0.5);
+  
+}
+
+ // masonry 
+ @mixin masonry($columns: 3, $gap: 2%, $selector: '> *') {
+
+    @if unit($gap) == "rem" {
+      $gap: strip-units($gap) * 16px;
+    }
+    $gapunit: unit($gap);
+  
+    // Fallback to inline-blocks and text-align: justify
+    $box-width: 100 / $columns * 1%;
+    $box-width-perc: (100 - (($columns - 1) * $gap)) / $columns;
+    $box-subract: rem( $gap/ ($columns / ($columns - 1)));
+  
+    text-align: justify;
+    font-size: 0;
+  
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  
+    & #{$selector} {
+  
+      @include box-sizing(border-box);
+  
+      font-size: 16px;
+      font-size: 1rem;
+  
+      vertical-align: top;
+      display: inline-block;
+  
+      @if $gapunit == '%' {
+        width: $box-width-perc;
+      } @else {
+        width: calc(#{$box-width} - #{$box-subract});
+      }
+    }
+  
+    // Masonry
+    $margins: $gap / 2 * -1;
+    $paddings: ($columns * ($gap/2)) / ((100 + strip-units($gap)) / 100);
+  
+    .csscolumns & {
+  
+      &:after {
+        content: none;
+      }
+  
+      //@include column-count($columns);
+
+      column-count: $columns;
+  
+      @if $gapunit == "%" {
+        //@include column-gap(0);
+        column-gap: 0;
+        margin: {
+          left: $margins;
+          right: $margins;
+        }
+      } @else {
+        //@include column-gap($gap);
+        column-gap: 0;
+      }
+  
+      #{$selector} {
+  
+        @if $gapunit == '%' {
+          padding: {
+            left: $paddings;
+            right: $paddings;
+          }
+        }
+  
+        width: 100%;
+  
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        column-break-inside: avoid;
+        break-inside: avoid;
+  
+      }
+    }
+  }
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+      @content;
+  }
+}
+  

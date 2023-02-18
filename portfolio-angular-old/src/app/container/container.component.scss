@@ -1,0 +1,21 @@
+@import '../../helpers/config';
+@import '../../helpers/colors';
+@import '../../helpers/mixins';
+
+.content {
+   background: $color_grey;  
+    float: right;  
+    padding: 1rem 0;
+}
+.container-fluid { 
+    background: $color_grey;
+   
+}
+
+
+// .col {
+//     width: 250px;
+//     float: left;
+//     margin-right: 20px;
+// }
+
