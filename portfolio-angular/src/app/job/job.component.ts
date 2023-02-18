@@ -4,12 +4,13 @@ import { Component, OnInit,  DoCheck, AfterContentInit, AfterContentChecked, Aft
 import { Router, ActivatedRoute } from '@angular/router';
 import { Job } from './job.model';
 import {Location} from '@angular/common';
-import analyze from 'rgbaster';
+// import analyze from 'rgbaster';
 
-import ColorThief from './../../assets/js/color-thief.umd';
+// import ColorThief from './../../assets/js/color-thief.umd';
 
+// @ts-ignore
 import * as Vibrant from 'node-vibrant/dist/vibrant.min';
-//import Vibrant from 'node-vibrant/dist/vibrant.min'; //../../../node_modules/node-vibrant/lib/color
+// import Vibrant from 'node-vibrant/dist/vibrant.min'; //../../../node_modules/node-vibrant/lib/color
 import { Palette } from 'node-vibrant/lib/color';
 
 @Component({
@@ -28,23 +29,27 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   imageBase64: any; 
 
-  result: Observable<any>;
+  result!: Observable<any>;
 
-  subscription: Subscription;
+  subscription!: Subscription;
 
-  technologies: String[];
+  technologies!: String[];
 
-  @ViewChild("section") section: ElementRef;
+  @ViewChild("section")
+  section!: ElementRef;
 
-  @ViewChild("figure") figure: ElementRef;
+  @ViewChild("figure")
+  figure!: ElementRef;
 
-  @ViewChild("title") title: ElementRef;
+  @ViewChild("title")
+  title!: ElementRef;
 
-  @ViewChild("toback") toback: ElementRef;  
+  @ViewChild("toback")
+  toback!: ElementRef;
 
   @Output() bgColor = new EventEmitter();
 
-  @Input() nomeBehaviorSubject: BehaviorSubject<string>;
+  @Input() nomeBehaviorSubject: BehaviorSubject<string> | undefined;
 
   constructor(private router: Router,
     private route: ActivatedRoute,
@@ -63,12 +68,12 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
       this._location.back();
     }   
 
-    setBg(el, dark, light) {
+    setBg(el: any, dark: string, light: string) {
       //this.renderer.setStyle(el, 'background-image', `linear-gradient(to  right bottom, ${dark}, ${light}`); 
       this.renderer.setStyle(el, 'background-color', `rgba(${light[0]},${light[1]},${light[2]},0.6)`);             
     }
 
-   toDataURL = url => fetch(url)
+   toDataURL = (url: string) => fetch(url)
     .then(response => response.blob())
     .then(blob => new Promise((resolve, reject) => {
       const reader = new FileReader()
@@ -77,7 +82,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
       reader.readAsDataURL(blob)
     }));
 
-    showVibrantColor(url): any {   
+    showVibrantColor(url: string): any {   
       //  base64
       this.toDataURL(url)
       .then(dataUrl => {
@@ -87,7 +92,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
         image.src =  this.imageBase64;
 
         Vibrant.from(image).getPalette()
-        .then((palette) => {
+        .then((palette: any) => {
           this.palette = palette; 
 
           console.log('palette ', this.palette);
@@ -118,7 +123,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
     }
   
   ngOnInit(): void {      
-    const id = + this.route.snapshot.paramMap.get('id');
+    const id = Number(this.route.snapshot.paramMap.get('id'));
 
       this.postsService.getPost(id).subscribe(job => {
       this.job = job;

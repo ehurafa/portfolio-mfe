@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
+import { JobComponent } from './job/job.component'
 
 const routes: Routes = [
- 
+
   { component: ContainerComponent, path: ""},
-  { component: ContainerComponent, path: "**"}
+  // { component: ContainerComponent, path: "**"},
+  { component: JobComponent, path: "job/:id" },
+  { component: ContainerComponent, path: "**"},
+  
 ];
 
 @NgModule({

@@ -4,11 +4,12 @@
     <div class="row">       
         <div class="col-12" >
 
-            <app-preloader *ngIf="!job"></app-preloader>
+            <!-- <app-preloader *ngIf="!job"></app-preloader> -->
 
             <div class="job transition" *ngIf="job">    
-                    <div class="image" [ngStyle]="{'background-image': 'url(' + job?.acf?.image_post?.url + ')'}">  
+                    <!-- <div class="image" [ngStyle]="{'background-image': 'url(' + job?.acf?.image_post?.url + ')'}">   -->
                     <!-- <div class="image" [ngStyle]="{'background-image': 'url(' + imageBase64 + ')'}">                -->
+                    <div class="image">  
                     <figure class="imgWrap" #figure >                
                         <img [src]="job?.acf?.image_post?.url"  />
                         <!-- <img [src]="imageBase64"  /> -->
