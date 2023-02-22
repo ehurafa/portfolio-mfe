@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
-import { JobComponent } from './job/job.component'
+import { JobComponent } from './job/job.component';
+import { ContactComponent } from './pages/contact/contact.component'
 
 const routes: Routes = [
   { path: '', component: ContainerComponent },
   { path: 'detalhes/:id', component: JobComponent },
+  { path: 'contato', component: ContactComponent },
   { component: ContainerComponent, path: "**"},
   
 ];
