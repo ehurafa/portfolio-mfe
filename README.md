@@ -22,6 +22,7 @@ O projeto ainda está em constante desenvolvimento...
 | :hammer: MFE for Labs page | Stand by |
 | :hourglass: New Loader All Application       | Stand by    |
 | :calling: Responsive Improvements                                | Development |
+| :hammer: Review typescript typing | Stand by    |
 
 
 
