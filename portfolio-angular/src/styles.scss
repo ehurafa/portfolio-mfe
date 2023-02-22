@@ -70,10 +70,6 @@ a {
     width: 100%;
     flex-direction: row;    
 
-    .content {
-        padding: 40px 20px 20px 20px;
-    }
-
     @include md {
         display: block;
         float: left;

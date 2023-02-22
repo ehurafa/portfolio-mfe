@@ -33,7 +33,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   subscription!: Subscription;
 
-  technologies!: String[];
+  technologies!: any;
 
   @ViewChild("section")
   section!: ElementRef;
@@ -96,11 +96,8 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
         Vibrant.from(image).getPalette()
         .then((palette: any) => {
           this.palette = palette; 
-
-          console.log('palette ', this.palette);
           
-          this.setBg(this.figure.nativeElement, this.palette.DarkVibrant.getHex(),this.palette.Muted.rgb);           
-
+          this.setBg(this.figure.nativeElement, this.palette.DarkVibrant.getHex(),this.palette.Muted.rgb);
 
           this.renderer.setStyle(this.toback.nativeElement, 'background-color', this.palette.DarkVibrant.getHex());
           this.renderer.setStyle(this.toback.nativeElement, 'color', this.palette.DarkVibrant.titleTextColor);
@@ -109,7 +106,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
           this.postsService.setColorPage = palette;
 
           this.postsService.colorEmmit.subscribe(
-            cor =>  cor//console.log('corrr ', cor)
+            cor =>  cor
           ); 
 
         })  
@@ -122,9 +119,7 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
       this.postsService.getPost(id).subscribe(job => {
       this.job = job;
-
       this.technologies = this.job?.acf?.list_of_technologies;
-
       
       this.showVibrantColor(this.job?.acf?.image_post?.sizes?.large);
       
