@@ -8,11 +8,11 @@
   <title>Portfólio Microfrontend</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -57,15 +57,27 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@rg/root-config": "//localhost:9000/rg-root-config.js",
-         "@rg/react-app": "//localhost:8081/rg-react-app.js",
-         "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
-         "@rg/react-certificates": "//localhost:8081/rg-react-certificates.js",
-         "angular-app": "//localhost:4200/main.js",
-         "portfolio-angular": "//localhost:4200/main.js"
+        "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-root-config.js",
+         "@rg/react-sidebar": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-sidebar.js",
+         "@rg/react-certificates": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-certificates.js",
+         "portfolio-angular": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-portfolio-main.js"
       }
     }
+    
   </script>
+  <% } else { %>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@rg/root-config": "//localhost:9000/rg-root-config.js",
+           "@rg/react-app": "//localhost:8081/rg-react-app.js",
+           "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
+           "@rg/react-certificates": "//localhost:8081/rg-react-certificates.js",
+           "angular-app": "//localhost:4200/main.js",
+           "portfolio-angular": "//localhost:4200/main.js"
+        }
+      }
+    </script>
   <% } %>
 
   <!--
