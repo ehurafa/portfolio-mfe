@@ -10,12 +10,14 @@ import { APP_BASE_HREF } from '@angular/common';
 
 import { ContainerComponent } from './container/container.component';
 import { CardComponent } from './card/card.component';
+import { JobComponent } from './job/job.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContainerComponent,
-    CardComponent
+    CardComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import { CardComponent } from './card/card.component';
     FormsModule
   ],
   exports: [ CommonModule ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/portfolio' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

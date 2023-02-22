@@ -74,7 +74,9 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
     }
 
    toDataURL = (url: string) => fetch(url)
-    .then(response => response.blob())
+    .then(response => {
+      return response.blob()
+    })
     .then(blob => new Promise((resolve, reject) => {
       const reader = new FileReader()
       reader.onloadend = () => resolve(reader.result)
@@ -99,19 +101,12 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
           
           this.setBg(this.figure.nativeElement, this.palette.DarkVibrant.getHex(),this.palette.Muted.rgb);           
 
-          //this.setBg(this.section.nativeElement, this.palette.DarkVibrant.getHex(),this.palette.Vibrant.getHex()); 
-          //this.renderer.setStyle(this.title.nativeElement, 'background-color', this.palette.Vibrant.getHex());    
-          
-          //this.renderer.setStyle(this.title.nativeElement, 'background-color', this.palette.DarkVibrant.getHex() ); 
-          //this.renderer.setStyle(this.title.nativeElement, 'color', this.palette.DarkVibrant.titleTextColor); 
 
           this.renderer.setStyle(this.toback.nativeElement, 'background-color', this.palette.DarkVibrant.getHex());
           this.renderer.setStyle(this.toback.nativeElement, 'color', this.palette.DarkVibrant.titleTextColor);
           
           
           this.postsService.setColorPage = palette;
-
-          //this.bgColor.emit(palette);
 
           this.postsService.colorEmmit.subscribe(
             cor =>  cor//console.log('corrr ', cor)
@@ -129,14 +124,13 @@ export class JobComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
       this.job = job;
 
       this.technologies = this.job?.acf?.list_of_technologies;
+
       
       this.showVibrantColor(this.job?.acf?.image_post?.sizes?.large);
-     
+      
     });     
-
+    
   }
- 
-
   ngDoCheck(): void{ }
   ngAfterContentInit(): void { }
   ngAfterContentChecked(): void {}

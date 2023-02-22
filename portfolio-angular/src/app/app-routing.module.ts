@@ -6,10 +6,8 @@ import { ContainerComponent } from './container/container.component';
 import { JobComponent } from './job/job.component'
 
 const routes: Routes = [
-
-  { component: ContainerComponent, path: ""},
-  // { component: ContainerComponent, path: "**"},
-  { component: JobComponent, path: "job/:id" },
+  { path: '', component: ContainerComponent },
+  { path: 'detalhes/:id', component: JobComponent },
   { component: ContainerComponent, path: "**"},
   
 ];
