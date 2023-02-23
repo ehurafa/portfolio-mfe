@@ -64,24 +64,24 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-root-config.js",
-         "@rg/react-sidebar": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-sidebar.js",
-         "@rg/react-certificates": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-certificates.js",
-         "portfolio-angular": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-portfolio-main.js"
+        "@rg/root-config": "//localhost:9000/rg-root-config.js",
+         "@rg/react-app": "//localhost:8081/rg-react-app.js",
+         "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
+         "@rg/react-notification-bar-parcel": "//localhost:8081/rg-react-notification-bar-parcel.js",
+         "@rg/react-certificates": "//localhost:8082/rg-react-certificates.js",
+         "angular-app": "//localhost:4200/main.js",
+         "portfolio-angular": "//localhost:4200/main.js"
       }
     }
-    
   </script>
   <% } else { %>
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@rg/root-config": "//localhost:9000/rg-root-config.js",
-           "@rg/react-app": "//localhost:8081/rg-react-app.js",
-           "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
-           "@rg/react-certificates": "//localhost:8081/rg-react-certificates.js",
-           "angular-app": "//localhost:4200/main.js",
-           "portfolio-angular": "//localhost:4200/main.js"
+          "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-root-config.js",
+           "@rg/react-sidebar": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-sidebar.js",
+           "@rg/react-certificates": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-certificates.js",
+           "portfolio-angular": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-portfolio-main.js"
         }
       }
     </script>

@@ -6,12 +6,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css'
 
+import Parcel from 'single-spa-react/parcel'
+
 export default function App({ name }) {
   const [certificates, setCertificates] = useState([])
 
   useEffect(() => {
 
-    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/cf73231b02ccb4b2b39c4b79671c9c7daa5ce5d8/mfe-certificates";
+    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/89ee21e9816ea18bec168f5fb671a1a94e67dfaa/mfe-certificates";
     async function fetchData() {
       const res = await fetch(url)
       const data = await res.json()
@@ -22,25 +24,41 @@ export default function App({ name }) {
   }, [])
 
   return (
+    <>
     <div className="certificates">
       <h2 className="main-title">Certificados</h2>
         <div className="wrapper">
           {certificates && certificates.map((certificate) => (
             <div key={certificate.title} className="card">
-                <a href={certificate.url} target="_blank" className="icon"><i className={ classNames('fab', { [certificate.icon]: true }) }></i></a>
+                <a href={certificate.url} target="_blank" className="icon">
+                  <i className={ 
+                    classNames(
+                      { "fab": !certificate.prefix },
+                      { [certificate.prefix]: certificate.prefix },
+                      { [certificate.icon]: true }) 
+                  }></i>
+                </a>
                 <h3><a href={certificate.url} target="_blank">{ certificate.title }</a></h3>
 
                 <div className="about">
                   {certificate.start && <p>Iniciado em: { certificate.start }</p>}
-                  
-                  <p>Finalizado em: { certificate.end }</p>
-                  <p>Instituição: { certificate.scholl }</p>
-                  <p>Professor: { certificate.instructor }</p>
-                  <p>Carga horária: { certificate.instructor }</p>
+                  {certificate.end && <p>Finalizado em: { certificate.end }</p>}
+                  {certificate.school && <p>Instituição: { certificate.school }</p>}
+                  {certificate.instructor && <p>Professor: { certificate.instructor }</p>}
+                  {certificate.workload && <p>Carga horária: { certificate.workload }</p>}
                 </div>
             </div>
           ))}
         </div>
     </div>
+    <Parcel 
+        config={() => System.import('@rg/react-notification-bar-parcel')}
+        notification={{
+          message: 'Aplicação React',
+              background: 'bg-blue1',
+              icon: null    
+          }}
+        />
+    </>
   );
 }

@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { ParcelModule } from 'single-spa-angular/parcel';
 
 import { ContainerComponent } from './container/container.component';
 import { CardComponent } from './card/card.component';
@@ -27,7 +28,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     HttpClientModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ParcelModule
   ],
   exports: [ CommonModule ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/portfolio' }],

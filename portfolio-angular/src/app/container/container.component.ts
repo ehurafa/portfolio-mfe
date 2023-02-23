@@ -3,6 +3,7 @@ import { PostsService } from './../../services/posts.service';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {transition, trigger} from '@angular/animations';
+import { mountRootParcel } from 'single-spa';
 
 @Component({
   selector: 'app-container',
@@ -21,6 +22,20 @@ import {transition, trigger} from '@angular/animations';
 })
 export class ContainerComponent implements OnInit {
 
+  async config() {
+    return (window as any).System.import('@rg/react-notification-bar-parcel');
+  }
+  mountRootParcel = mountRootParcel;
+
+  parcelProps = { 
+    notification: {
+      message: 'Aplicação Angular',
+      background: 'bg-red1',
+      color: 'color-white',
+      icon: null
+    }
+  };
+
   posts: any = [];
 
   cols: any = [];
@@ -34,32 +49,32 @@ export class ContainerComponent implements OnInit {
   // public animatePage = true;
 
   constructor(private postsService: PostsService
-     ) { 
+     ) {
 
   }
 
-  ngOnInit(): void { 
-     
+  ngOnInit(): void {
+
     this.postsService.getPosts()
     .subscribe(posts => {
       this.posts = posts;
-    }); 
+    });
 
     for (const key in this.posts) {
       if (this.posts.hasOwnProperty(key)) {
         const element = this.posts[key];
- 
+
         this.cols.push(element.acf);
       }
     }
-    
- 
+
+
     for (let index = 0; index < this.cols.length; index++) {
-       
+
         this.colOne.push(this.cols[index]);
         this.colTwo.push(this.cols[index +1] );
-        this.colThree.push(this.cols[index +2] ); 
-        
+        this.colThree.push(this.cols[index +2] );
+
         this.colsINdex.push(index);
 
     }

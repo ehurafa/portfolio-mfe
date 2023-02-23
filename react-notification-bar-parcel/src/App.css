@@ -1,0 +1,29 @@
+.bar {
+    background: #ddd;
+    z-index: 10;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: reveal 2s;
+    padding: 5px 20px;
+}
+.bar.bg-blue1 {
+    background: #61DBFB;
+}
+.bar.bg-red1 {
+    background: #dd1b16;
+}
+.bar.color-white {
+    color: #fff;
+}
+
+@keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+  }
