@@ -90,25 +90,27 @@
             }
         }
     }
-
     .to-back {
-        @include transition(all 1s ease);
-        @include border-radius(0);
-
-        font-size: 0.8rem;
-        opacity: 0.9;
-       
-        i {
-            margin-right: 0.5rem;
-        }
-
-        &:hover {
-            opacity: 1;
+        float: left;
+        width: 100%;
+        button {
+            @include transition(all 1s ease);
+            @include border-radius(0);
+    
+            font-size: 0.8rem;
+            opacity: 0.9;
+           
+            i {
+                margin-right: 0.5rem;
+            }
+    
+            &:hover {
+                opacity: 1;
+            }
         }
     }
-    
  }
- .technologies {    
+ .technologies {
     nav {
         display: block;
         padding: 0;
@@ -116,7 +118,8 @@
         .badge {
             background: $color_black;
             color: #fff;
-            margin: 0 0.8rem 0 0;
+            margin: 0 0.8rem 0.8rem 0;
+            float: left;
             &:hover {
                 color: #fff;
             }

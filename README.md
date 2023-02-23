@@ -16,13 +16,14 @@ O projeto ainda está em constante desenvolvimento...
 | :mailbox_with_mail: ~~API OrderBy~~                                            | Complete |
 | :performing_arts: Back with portfolio animations | Stand by |  
 | :arrow_left: Collapse Sidebar                            | Stand by    |
-| :hammer: ~~Certificates page~~                                      | Complete    |
-| :hammer: ~~Contact Form page~~                                      | Complete    |
 | :mag: Filter Jobs  | Stand by    |
 | :hammer: MFE for Labs page | Stand by |
 | :hourglass: New Loader All Application       | Stand by    |
 | :calling: Responsive Improvements                                | Development |
 | :hammer: Review typescript typing | Stand by    |
+| :hammer: ~~Certificates page~~                                      | Complete    |
+| :hammer: ~~Contact Form page~~                                      | Complete    |
+| :loudspeaker: ~~Notification Bar~~     | Complete    |
 
 
 

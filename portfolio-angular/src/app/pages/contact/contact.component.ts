@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { FormGroup, FormControl, Validators, NgForm, FormGroupDirective } from '@angular/forms';
+import { mountRootParcel } from 'single-spa';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,21 @@ import { FormGroup, FormControl, Validators, NgForm, FormGroupDirective } from '
 
 })
 export class ContactComponent implements OnInit {
+
+  async config() {
+    return (window as any).System.import('@rg/react-notification-bar-parcel');
+  }
+  mountRootParcel = mountRootParcel;
+
+  parcelProps = { 
+    notification: {
+      message: 'Aplicação Angular',
+      background: 'bar--bg-red1',
+      color: 'bar--color-white',
+      icon: 'fab fa-angular',
+      iconAnimation: 'bar--animation-bounce'
+    }
+  };
 
   progress = 0;
   total = 100;  
