@@ -30,9 +30,10 @@ export class ContainerComponent implements OnInit {
   parcelProps = { 
     notification: {
       message: 'Aplicação Angular',
-      background: 'bg-red1',
-      color: 'color-white',
-      icon: 'fab fa-angular'
+      background: 'bar--bg-red1',
+      color: 'bar--color-white',
+      icon: 'fab fa-angular',
+      iconAnimation: 'bar--animation-bounce'
     }
   };
 

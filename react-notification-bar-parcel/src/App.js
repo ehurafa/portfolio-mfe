@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 const ReactApplicationBarParcel = ({ notification }) => {
 
-    const { message, color, background, icon = null, animated = true  } = notification
+    const { message, color, background, icon = null, iconAnimation, animated = true  } = notification
 
 
     const frameworks = {
@@ -27,7 +27,12 @@ const ReactApplicationBarParcel = ({ notification }) => {
 
     return (
         <div className={
-            classNames( 'bar', { [color]: color}, { [background]: background})
+            classNames(
+                'bar',
+                { [color]: color},
+                { [background]: background},
+                { [iconAnimation]: iconAnimation}
+                )
             }>
                 <p>{ message }</p>
                 { icon && <i className={icon}></i> }

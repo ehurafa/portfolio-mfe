@@ -55,8 +55,9 @@ export default function App({ name }) {
         config={() => System.import('@rg/react-notification-bar-parcel')}
         notification={{
             message: 'Aplicação React',
-            background: 'bg-blue1',
-            icon: 'fab fa-react'
+            background: 'bar--bg-blue1',
+            icon: 'fab fa-react',
+            iconAnimation: 'bar--animation-rotate'
           }}
         />
     </>

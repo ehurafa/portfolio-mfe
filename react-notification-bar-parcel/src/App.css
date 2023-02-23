@@ -9,7 +9,14 @@
     animation: reveal 2s;
     padding: 5px 20px;
 }
-.bar.bg-blue1 {
+
+.bar p {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.bar.bar--bg-blue1 {
     background: #61DBFB;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#61dbfb+0,63ffe7+100 */
     background: #61dbfb; /* Old browsers */
@@ -17,7 +24,7 @@
     background: -webkit-linear-gradient(-45deg,  #61dbfb 0%,#63ffe7 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg,  #61dbfb 0%,#63ffe7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.bar.bg-red1 {
+.bar.bar--bg-red1 {
     background: #dd1b16;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dd1b16+0,dd4b16+100 */
     background: #dd1b16; /* Old browsers */
@@ -25,23 +32,44 @@
     background: -webkit-linear-gradient(-45deg,  #dd1b16 0%,#dd4b16 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg,  #dd1b16 0%,#dd4b16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.bar.bg-green1 {
+.bar.bar--bg-green1 {
     background: #42b883;
 }
-.bar.color-white {
+.bar.bar--color-white {
     color: #fff;
-}
-.bar p {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 0.8rem;
 }
 
 @keyframes reveal {
     0% {
-      transform: translate(0,100%);
+        transform: translate(0,100%);
     }
     100% {
         transform: translate(0, 0);
     }
-  }
+}
+
+.bar.bar--animation-rotate i {
+    animation: rotating 3s linear infinite;
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.bar.bar--animation-bounce i {
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
