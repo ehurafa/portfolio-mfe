@@ -32,7 +32,7 @@ export class ContainerComponent implements OnInit {
       message: 'Aplicação Angular',
       background: 'bg-red1',
       color: 'color-white',
-      icon: null
+      icon: 'fab fa-angular'
     }
   };
 

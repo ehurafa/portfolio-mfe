@@ -11,12 +11,30 @@
 }
 .bar.bg-blue1 {
     background: #61DBFB;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#61dbfb+0,63ffe7+100 */
+    background: #61dbfb; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #61dbfb 0%, #63ffe7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #61dbfb 0%,#63ffe7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #61dbfb 0%,#63ffe7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .bar.bg-red1 {
     background: #dd1b16;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dd1b16+0,dd4b16+100 */
+    background: #dd1b16; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #dd1b16 0%, #dd4b16 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #dd1b16 0%,#dd4b16 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #dd1b16 0%,#dd4b16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.bar.bg-green1 {
+    background: #42b883;
 }
 .bar.color-white {
     color: #fff;
+}
+.bar p {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.8rem;
 }
 
 @keyframes reveal {

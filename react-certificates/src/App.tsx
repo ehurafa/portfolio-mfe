@@ -54,9 +54,9 @@ export default function App({ name }) {
     <Parcel 
         config={() => System.import('@rg/react-notification-bar-parcel')}
         notification={{
-          message: 'Aplicação React',
-              background: 'bg-blue1',
-              icon: null    
+            message: 'Aplicação React',
+            background: 'bg-blue1',
+            icon: 'fab fa-react'
           }}
         />
     </>
