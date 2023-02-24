@@ -13,7 +13,7 @@ export default function App({ name }) {
 
   useEffect(() => {
 
-    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/89ee21e9816ea18bec168f5fb671a1a94e67dfaa/mfe-certificates";
+    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/583a2daf4469fd339f4ef09dcea4341207294fca/mfe-certificates";
     async function fetchData() {
       const res = await fetch(url)
       const data = await res.json()

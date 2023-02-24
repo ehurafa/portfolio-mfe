@@ -1,14 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, BrowserRouter } from 'react-router-dom'
+import classNames from 'classnames'
+
 import './App.css';
 import profile from './img/profile.jpg'
 import brand from './img/brand.png'
 
+import Menu from './components/Menu'
+
 const ReactSidebar = () => {
+
+    const [open, setOpen ] = useState(false)
+
+    const handleChangeMenu = () => {
+        setOpen(!open)
+    }
+ 
 
     return (
         <BrowserRouter>
+         <aside className={
+            classNames(
+                "main-sidebar",
+                { "open": open }
+                )
+             }>
+  
             <div className="sidebar">
+                <Menu myFunction={ handleChangeMenu } />
                 <div className="inner" >
                     <div className="logo">
                         <figure> 
@@ -53,6 +72,7 @@ const ReactSidebar = () => {
                     </div>
                 </div>
             </div>
+            </aside>
         </BrowserRouter>
     )
 }
