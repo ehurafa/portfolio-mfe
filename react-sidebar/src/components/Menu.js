@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Menu = (props) => {
-    const { myFunction } = props;
+    const { handleOpen } = props;
 
   return (
     <div class="mobile menu-control">
-        <span onClick={ () => myFunction() }>
+        <span onClick={ () => handleOpen() }>
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
         </span>

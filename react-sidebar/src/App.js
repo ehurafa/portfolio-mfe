@@ -27,7 +27,7 @@ const ReactSidebar = () => {
              }>
   
             <div className="sidebar">
-                <Menu myFunction={ handleChangeMenu } />
+                <Menu handleOpen={ handleChangeMenu } />
                 <div className="inner" >
                     <div className="logo">
                         <figure> 
@@ -42,17 +42,17 @@ const ReactSidebar = () => {
                     </div>
 
                     <div className="social">
-                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank">
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b linkedin" target="_blank" >
                             <span class="hi-icon">
                                 <i className="fab fa-linkedin-in"></i>
                             </span>
                         </a>
-                        <a href="https://br.pinterest.com/ehurafa/jobs/" className="transition hi-icon-effect-3 hi-icon-effect-3b pinterest" target="_blank">
+                        <a href="https://br.pinterest.com/ehurafa/jobs/" className="transition hi-icon-effect-3 hi-icon-effect-3b pinterest" target="_blank" >
                             <span class="hi-icon">
                                 <i className="fab fa-pinterest-p"></i>
                             </span>
                         </a>
-                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b github" target="_blank">
+                        <a href="https://www.linkedin.com/in/rflrafa/" className="transition hi-icon-effect-3 hi-icon-effect-3b github" target="_blank" >
                             <span class="hi-icon">
                                 <i className="fab fa-github-alt"></i>
                             </span>
@@ -60,14 +60,14 @@ const ReactSidebar = () => {
                     </div>
                     <div className="navigation">
                         <nav>
-                            <Link to="/portfolio">Inicial</Link>
+                            <Link to="/portfolio" onClick={ () => handleChangeMenu() }>Inicial</Link>
                         </nav>
 
                         <nav>
-                            <Link to="/certificados">Certificados</Link>
+                            <Link to="/certificados" onClick={ () => handleChangeMenu() }>Certificados</Link>
                         </nav>
                         <nav>
-                            <Link to="/portfolio/contato">Contato</Link>
+                            <Link to="/portfolio/contato" onClick={ () => handleChangeMenu() }>Contato</Link>
                         </nav>
                     </div>
                 </div>

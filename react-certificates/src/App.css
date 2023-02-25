@@ -5,26 +5,6 @@
     gap: 20px;
 }
 
-.certificates .card {
-    width: 180px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    border: 0;
-    background: transparent;
-}
-
-.certificates .card a {
-    color: #333;
-}
-
-.certificates .card a:hover {
-    color: #000;
-}
-
-
 .certificates .icon  {
     display: inline-block;
     background: #eee;
@@ -48,27 +28,4 @@
     font-weight: normal;
     min-height: 3.7em;
     display: inline-block;
-}
-
-.certificates .about {
-    text-align: left;
-    border-top: 1px solid #dedede;
-    padding-top: 10px;
-    margin-top: 8px;
-}
-
-.certificates  .about p {
-    font-size: 0.7rem;
-}
-
-.certificates .card:hover a {
-    color: #282828;
-    background: #fff;
-    border-color: #eee;
-}
-
-@media (max-width: 768px) {
-    .certificates .card {
-        width: 46%;
-    }
 }

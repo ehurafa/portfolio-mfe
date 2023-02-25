@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css'
 
+import Card from './components/Card'
+
 import Parcel from 'single-spa-react/parcel'
 
 export default function App({ name }) {
@@ -13,7 +15,7 @@ export default function App({ name }) {
 
   useEffect(() => {
 
-    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/583a2daf4469fd339f4ef09dcea4341207294fca/mfe-certificates";
+    const url = "https://gist.githubusercontent.com/ehurafa/eb6f6aa229d113dfe761f44ecca31274/raw/0a910f0a37d037be16b8ddae31028370daf1221d/mfe-certificates";
     async function fetchData() {
       const res = await fetch(url)
       const data = await res.json()
@@ -29,25 +31,7 @@ export default function App({ name }) {
       <h2 className="main-title">Certificados</h2>
         <div className="wrapper">
           {certificates && certificates.map((certificate) => (
-            <div key={certificate.title} className="card">
-                <a href={certificate.url} target="_blank" className="icon">
-                  <i className={ 
-                    classNames(
-                      { "fab": !certificate.prefix },
-                      { [certificate.prefix]: certificate.prefix },
-                      { [certificate.icon]: true }) 
-                  }></i>
-                </a>
-                <h3><a href={certificate.url} target="_blank">{ certificate.title }</a></h3>
-
-                <div className="about">
-                  {certificate.start && <p>Iniciado em: { certificate.start }</p>}
-                  {certificate.end && <p>Finalizado em: { certificate.end }</p>}
-                  {certificate.school && <p>Instituição: { certificate.school }</p>}
-                  {certificate.instructor && <p>Professor: { certificate.instructor }</p>}
-                  {certificate.workload && <p>Carga horária: { certificate.workload }</p>}
-                </div>
-            </div>
+            <Card certificate={certificate} />
           ))}
         </div>
     </div>

@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portfólio Microfrontend</title>
+  <title>Portfólio Microfrontend - Rafael Gomes</title>
+
+  <!-- por motivos pessoais, não quero indexar -->
+  <meta name="robots" content="nofollow">
+  <meta name="googlebot" content="noindex">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="msapplication-TileColor" content="#00ffeb">
@@ -45,6 +49,17 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LVZBDFW1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5LVZBDFW1N');
+  </script>
+
   <script type="systemjs-importmap">
     {
       "imports": {
@@ -65,11 +80,9 @@
     {
       "imports": {
         "@rg/root-config": "//localhost:9000/rg-root-config.js",
-         "@rg/react-app": "//localhost:8081/rg-react-app.js",
          "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
          "@rg/react-notification-bar-parcel": "//localhost:8081/rg-react-notification-bar-parcel.js",
          "@rg/react-certificates": "//localhost:8082/rg-react-certificates.js",
-         "angular-app": "//localhost:4200/main.js",
          "portfolio-angular": "//localhost:4200/main.js"
       }
     }
@@ -78,12 +91,15 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-root-config.js",
-           "@rg/react-sidebar": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-sidebar.js",
-           "@rg/react-certificates": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-rg-react-certificates.js",
+          "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-root-config.js",
+           "@rg/react-sidebar": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-sidebar.js",
+           "@rg/react-notification-bar-parcel": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-notification-bar-parcel.js",
+           "@rg/react-certificates": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-certificates.js",
            "portfolio-angular": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/mfe-portfolio-main.js"
         }
       }
+      
+
     </script>
   <% } %>
 
