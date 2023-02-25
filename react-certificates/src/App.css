@@ -66,3 +66,9 @@
     background: #fff;
     border-color: #eee;
 }
+
+@media (max-width: 768px) {
+    .certificates .card {
+        width: 46%;
+    }
+}

@@ -212,10 +212,18 @@ img {
         justify-content: center;
         flex-direction: column;
     }
+    .logo {
+        margin: 0;
+    }
     .logo figure img {
         max-width: 200px;
       }
     .social { 
         text-align: center;
+    }
+    .navigation nav a:hover,
+    .navigation nav a:active {
+        border-left: 0;
+        padding-left: 0;
     }
 }
