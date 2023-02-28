@@ -33,7 +33,12 @@
     background: linear-gradient(135deg,  #dd1b16 0%,#dd4b16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .bar.bar--bg-green1 {
-    background: #42b883;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4ebf48+0,42b883+100 */
+    background: #4ebf48; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #4ebf48 0%, #42b883 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #4ebf48 0%,#42b883 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #4ebf48 0%,#42b883 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 .bar.bar--color-white {
     color: #fff;

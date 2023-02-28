@@ -24,6 +24,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <script>
+    const socket = new WebSocket('ws://localhost:8080')
+    console.log(socket)
+  </script>
+
+  
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -80,10 +87,11 @@
     {
       "imports": {
         "@rg/root-config": "//localhost:9000/rg-root-config.js",
-         "@rg/react-sidebar": "//localhost:8080/rg-react-sidebar.js",
+         "@rg/react-sidebar": "//localhost:8082/rg-react-sidebar.js",
          "@rg/react-notification-bar-parcel": "//localhost:8081/rg-react-notification-bar-parcel.js",
          "@rg/react-certificates": "//localhost:8081/rg-react-certificates.js",
-         "portfolio-angular": "//localhost:4200/main.js"
+         "portfolio-angular": "//localhost:4200/main.js",
+         "@rg/vue-labs": "//localhost:8080/js/app.js"
       }
     }
   </script>

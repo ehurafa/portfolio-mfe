@@ -62,9 +62,11 @@ const ReactSidebar = () => {
                         <nav>
                             <Link to="/portfolio" onClick={ () => handleChangeMenu() }>Inicial</Link>
                         </nav>
-
                         <nav>
                             <Link to="/certificados" onClick={ () => handleChangeMenu() }>Certificados</Link>
+                        </nav>
+                        <nav>
+                            <Link to="/labs" onClick={ () => handleChangeMenu() }>Labs</Link>
                         </nav>
                         <nav>
                             <Link to="/portfolio/contato" onClick={ () => handleChangeMenu() }>Contato</Link>

@@ -6,6 +6,8 @@ import classNames from 'classnames'
 
 const ReactApplicationBarParcel = ({ notification }) => {
 
+    console.log('notification ', notification)
+
     const { message, color, background, icon = null, iconAnimation, animated = true  } = notification
 
 
