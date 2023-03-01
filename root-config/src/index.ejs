@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
   <script>
-    const socket = new WebSocket('ws://localhost:8080')
+    const socket = new WebSocket('ws://localhost:8081')
     console.log(socket)
   </script>
 
@@ -87,11 +87,12 @@
     {
       "imports": {
         "@rg/root-config": "//localhost:9000/rg-root-config.js",
-         "@rg/react-sidebar": "//localhost:8082/rg-react-sidebar.js",
-         "@rg/react-notification-bar-parcel": "//localhost:8081/rg-react-notification-bar-parcel.js",
+         "@rg/react-sidebar": "//localhost:8081/rg-react-sidebar.js",
+         "@rg/react-notification-bar-parcel": "//localhost:8082/rg-react-notification-bar-parcel.js",
          "@rg/react-certificates": "//localhost:8081/rg-react-certificates.js",
+         "@rg/react-costs": "//localhost:8080/rg-react-costs.js",
          "portfolio-angular": "//localhost:4200/main.js",
-         "@rg/vue-labs": "//localhost:8080/js/app.js"
+         "@rg/vue-labs": "//localhost:8083/js/app.js"
       }
     }
   </script>

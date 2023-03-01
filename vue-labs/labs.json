@@ -1,0 +1,9 @@
+[
+    {
+        'id': 1,
+        'project-name': 'Costs',
+        'project-slug': 'costs',
+        'thumb': 'https://rafaelgomes.net/labs/costs.png',
+        'framework': 'react'
+    }
+]
