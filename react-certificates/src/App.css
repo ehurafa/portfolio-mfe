@@ -1,3 +1,10 @@
+.certificates {
+    width: calc(100% - 290px);
+    float: right;
+    padding-top: 40px;
+    background: #f3f3f3;
+}
+
 .certificates .wrapper {
     justify-content: start;
     display: flex;
@@ -29,3 +36,9 @@
     min-height: 3.7em;
     display: inline-block;
 }
+
+@media (max-width: 576px) {
+    .certificates {
+        width: calc(100% - 10vw);
+    }
+  }

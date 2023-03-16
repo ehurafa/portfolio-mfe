@@ -7,10 +7,7 @@
 <script>
 export default {
   name: 'ThumbApp',
-  props: ['item'],
-  mounted () {
-    console.log('b ', this.item)
-  }
+  props: ['item']
 }
 </script>
 <style>

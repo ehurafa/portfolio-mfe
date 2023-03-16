@@ -57,18 +57,28 @@ export default {
         parcelMounted() {},
         parcelUpdated() {},
         async fetchLabs() {
-            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/df5fd1c221a5b1f725ddf1e4a1575947f55acb10/mfe-labs')
+            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/518121433cb3de60d078796d4e52477c10a5f768/mfe-labs')
             this.labsList = labs.data
-            console.log('this.labsList ', this.labsList)
         },
   }
 }
 </script>
 <style>
+.labs {
+  float: right;
+  width: calc(100% - 290px);
+  min-height: 100vh;
+  background: #f3f3f3;
+}
 .labs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding-top: 30px;
 }
+@media (max-width: 576px) {
+    .labs {
+      width: calc(100% - 10vw);
+    }
+  }
 </style>

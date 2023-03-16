@@ -5,4 +5,12 @@
     font-family: 'Open Sans';
     background: #efefef;
     height: 100%;
+    width: calc(100% - 280px);
+    float: right;
+  }
+
+  @media (max-width: 576px) {
+    .costs_root {
+      width: calc(100% - 10vw);
+    }
   }

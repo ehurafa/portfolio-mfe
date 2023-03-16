@@ -60,7 +60,7 @@ const ReactSidebar = () => {
                     </div>
                     <div className="navigation">
                         <nav>
-                            <Link to="/portfolio" onClick={ () => handleChangeMenu() }>Inicial</Link>
+                            <Link to="/" onClick={ () => handleChangeMenu() }>Inicial</Link>
                         </nav>
                         <nav>
                             <Link to="/certificados" onClick={ () => handleChangeMenu() }>Certificados</Link>
@@ -68,9 +68,9 @@ const ReactSidebar = () => {
                         <nav>
                             <Link to="/labs" onClick={ () => handleChangeMenu() }>Projetos de Estudo</Link>
                         </nav>
-                        <nav>
-                            <Link to="/portfolio/contato" onClick={ () => handleChangeMenu() }>Contato</Link>
-                        </nav>
+                        {/* <nav>
+                            <Link to="/contato" onClick={ () => handleChangeMenu() }>Contato</Link>
+                        </nav> */}
                     </div>
                 </div>
             </div>

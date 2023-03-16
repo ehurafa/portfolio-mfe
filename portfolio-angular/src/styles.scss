@@ -67,12 +67,14 @@ a {
 }
 .main {
     display: flex;
-    width: 100%;
-    flex-direction: row;    
+    width: calc(100% - 290px);
+    flex-direction: row;
+    float: right;   
 
     @include md {
         display: block;
-        float: left;
+        float: right;
+        width: calc(100% - 10vw);
     }
 }
 .sidebar {   
