@@ -57,7 +57,7 @@ export default {
         parcelMounted() {},
         parcelUpdated() {},
         async fetchLabs() {
-            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/518121433cb3de60d078796d4e52477c10a5f768/mfe-labs')
+            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/23c7e597b0b3b96fde0e6919efba0224bd99ddda/mfe-labs')
             this.labsList = labs.data
         },
   }
@@ -69,6 +69,7 @@ export default {
   width: calc(100% - 290px);
   min-height: 100vh;
   background: #f3f3f3;
+  padding: 40px 20px 30px 20px;
 }
 .labs-container {
   display: flex;

@@ -1,7 +1,7 @@
 .certificates {
     width: calc(100% - 290px);
     float: right;
-    padding-top: 40px;
+    padding: 40px 20px 30px 20px ;
     background: #f3f3f3;
 }
 
