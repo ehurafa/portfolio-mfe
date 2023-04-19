@@ -32,7 +32,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     ParcelModule
   ],
   exports: [ CommonModule ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/portfolio' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

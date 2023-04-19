@@ -32,7 +32,8 @@ registerApplication({
 registerApplication({
   name: "portfolio-angular",
   app: () => System.import("portfolio-angular"),
-  activeWhen: (location) => location.pathname === '/',
+
+  activeWhen: (location) => location.pathname === '/' || /portfolio/.test(location.pathname)
 });
 
  registerApplication({
