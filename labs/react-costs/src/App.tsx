@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import './App.css'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom'
 import Home from './components/pages/Home'
 import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
@@ -23,22 +23,26 @@ export default function App({ name }) {
 
   return (
      <div className="costs_root">
-      <Router>
+      <HashRouter>
+
         <Navbar />
         <Container customClass="min-height">
-          <Routes>
-            
-              <Route path="/lab/costs/" element={<Home/>}/>
-              <Route path="/lab/costs/company" element={<Company/>}/>
-              <Route path="/lab/costs/contact" element={<Contact/>}/>
-              <Route path="/lab/costs/newproject" element={<NewProject/>}/>
-              <Route path="/lab/costs/projects" element={<Projects/>}/>
-              <Route path="/lab/costs/project/:id" element={<Project/>}/>
-            
-          </Routes>
+          
+            <Routes>
+              
+                <Route path="/" element={<Home/>}/>
+                <Route path="/company" element={<Company/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/newproject" element={<NewProject/>}/>
+                <Route path="/projects" element={<Projects/>}/>
+                <Route path="/project/:id" element={<Project/>}/>
+              
+            </Routes>
+          
         </Container>
         <Footer />
-      </Router>
+ 
+      </HashRouter>
       <Parcel 
           config={() => System.import('@rg/react-notification-bar-parcel')}
           notification={{

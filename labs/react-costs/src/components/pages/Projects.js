@@ -64,7 +64,7 @@ function Projects() {
         <div className="project_container">
             <div className="title_container">
                 <h1>Meus projetos</h1>
-                <LinkButton to="/labs/costs/newproject" text="Criar Projeto" />
+                <LinkButton to="/labs/reactcosts/newproject" text="Criar Projeto" />
             </div>
             { message && <Message msg={message} type="success" />}
             { projectMessage && <Message msg={projectMessage} type="success" />}

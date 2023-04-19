@@ -45,13 +45,13 @@ registerApplication({
  registerApplication({
   name: "@rg/vue-labs",
   app: () => System.import("@rg/vue-labs"),
-  activeWhen: ["/labs"],
+  activeWhen: (location) => location.pathname === '/labs'
 });
 
 registerApplication({
   name: "@rg/react-costs",
   app: () => System.import("@rg/react-costs"),
-  activeWhen: ["/costs"],
+  activeWhen: ["/labs/reactcosts"],
 });
 
 

@@ -57,7 +57,7 @@ export default {
         parcelMounted() {},
         parcelUpdated() {},
         async fetchLabs() {
-            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/23c7e597b0b3b96fde0e6919efba0224bd99ddda/mfe-labs')
+            const labs = await axios.get('https://gist.githubusercontent.com/ehurafa/4987d7be9fa2db874e07dab0a60c0a23/raw/fddc9cfeeb98b618055a7a2b97ae3dfb3d849eeb/mfe-labs')
             this.labsList = labs.data
         },
   }
