@@ -11,7 +11,8 @@ const Card = ({ certificate }) => {
                 { "fab": !certificate.prefix },
                 { [certificate.prefix]: certificate.prefix },
                 { [certificate.icon]: true }) 
-            }></i>
+            }
+            style={{color: certificate.color }}></i>
         </a>
         <h3><a href={certificate.url} target="_blank">{ certificate.title }</a></h3>
 
